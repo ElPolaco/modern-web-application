@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TNAI.API</name>
+    </assembly>
+    <members>
+        <member name="T:TNAI.API.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:TNAI.API.UnityConfig.Container">
+            <summary>
+            Configured Unity Container.
+            </summary>
+        </member>
+        <member name="M:TNAI.API.UnityConfig.RegisterTypes(Unity.IUnityContainer)">
+            <summary>
+            Registers the type mappings with the Unity container.
+            </summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+            There is no need to register concrete types such as controllers or
+            API controllers (unless you want to change the defaults), as Unity
+            allows resolving a concrete type even if it was not previously
+            registered.
+            </remarks>
+        </member>
+        <member name="T:TNAI.API.UnityWebApiActivator">
+            <summary>
+            Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET.
+            </summary>
+        </member>
+        <member name="M:TNAI.API.UnityWebApiActivator.Start">
+            <summary>
+            Integrates Unity when the application starts.
+            </summary>
+        </member>
+        <member name="M:TNAI.API.UnityWebApiActivator.Shutdown">
+            <summary>
+            Disposes the Unity container when the application is shut down.
+            </summary>
+        </member>
+        <member name="M:TNAI.API.Controllers.ProductsController.Get(System.Int32)">
+            <summary>
+            Pobieranie produktu
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TNAI.API.Controllers.ProductsController.GetAll">
+            <summary>
+            Pobranie wszszytkich prodóktów
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TNAI.API.Controllers.ProductsController.Post(TNAI.API.Models.InputModels.Products.ProductInputModel)">
+            <summary>
+            Dodanie produktu
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TNAI.API.Controllers.ProductsController.Put(System.Int32,TNAI.API.Models.InputModels.Products.ProductInputModel)">
+            <summary>
+            Aktualizowanie produktów
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TNAI.API.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Usuwanie produktów
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TNAI.API.Models.InputModels.Products.ProductInputModel.Name">
+            <summary>
+            Nazwa
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.InputModels.Products.ProductInputModel.Price">
+            <summary>
+            Cena
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.InputModels.Products.ProductInputModel.CategoryId">
+            <summary>
+            id kategorii
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.OutputModel.Products.ProductOutputModel.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.OutputModel.Products.ProductOutputModel.Name">
+            <summary>
+            nazwa
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.OutputModel.Products.ProductOutputModel.Price">
+            <summary>
+            cena
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.OutputModel.Products.ProductOutputModel.CategoryId">
+            <summary>
+            id kategorii
+            </summary>
+        </member>
+        <member name="P:TNAI.API.Models.OutputModel.Products.ProductOutputModel.CategoryName">
+            <summary>
+            nazwa kategorii
+            </summary>
+        </member>
+    </members>
+</doc>
